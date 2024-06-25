@@ -18,7 +18,8 @@ public class ModCreativeModTabs {
     public static final RegistryObject<CreativeModeTab> WEAPONS_TAB = CREATIVE_MODE_TABS.register("weapons_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Items.IRON_SWORD))
                     .title(Component.translatable("creativetab.weapons_tab"))
-                    .displayItems((itemDisplayParameters, output) -> {
+                    .displayItems((pParameters, pOutput) ->  {
+                        pOutput.accept(ModItems.RUBY.get());
 
 
                     })
